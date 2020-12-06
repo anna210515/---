@@ -1,0 +1,46 @@
+struct book
+{
+
+    char title[40];
+    int copies;
+    float price;
+
+}b1, b2, b3;
+struct books
+{
+
+    char title[40];
+    int copies;
+    float price;
+};
+
+void show_book(book b)
+{
+
+    cout << "Название: " << b.title << endl;
+    cout << "Количество экземпляров:  " << b.copies << endl;
+    cout << "Цена: " << b.price << endl;
+
+}
+
+void show_book(books b)
+{cout << "Название: " << b.title << endl;
+cout << "Количество экземпляров:  " << b.copies << endl;
+cout << "Цена: " << b.price << endl;
+}
+
+int main()
+{
+    setlocale(LC_ALL, "Russian");
+    book a = { "Код да Винчи",81000000, 189.00 };
+    show_book(a);
+
+    book b = { "Вино из одуванчиков",1800000, 122.00 };
+    show_book(b);
+
+    struct book c[20];
+    c[2].price = 1996;
+
+    system("pause");
+    return 0;
+}
