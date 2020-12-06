@@ -5,7 +5,7 @@ struct book
     int copies;
     float price;
 
-}b1, b2, b3;
+}b1, b2, b3, c1, c2, c3;
 struct books
 {
 
@@ -18,6 +18,7 @@ void show_book(book b)
 {
 
     cout << "Название: " << b.title << endl;
+    cout << "Название: " << c.title << endl;
     cout << "Количество экземпляров:  " << b.copies << endl;
     cout << "Цена: " << b.price << endl;
 
@@ -33,6 +34,7 @@ int main()
 {
     setlocale(LC_ALL, "Russian");
     book a = { "Код да Винчи",81000000, 189.00 };
+    book h = { "Код да Винчи",8100, 199.99 };
     show_book(a);
 
     book b = { "Вино из одуванчиков",1800000, 122.00 };
